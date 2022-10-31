@@ -1,0 +1,142 @@
+.App{
+  text-align: center;
+}
+
+
+.topContainer{
+  padding: 64px 112px;
+  font-size: 18px;
+  color: #101828;
+}
+
+.topHeader{
+  padding: 0px 32px;
+  text-align: center;
+  
+}
+.tHeader{
+  position: relative;
+  margin-bottom: 56px;
+}
+.tHeaderIcon{
+  position: absolute;
+  top: -20px;
+ right: 50px;
+ 
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.p{
+  background-color: #EAECF0;
+  border-radius: 8px;
+  padding: 24px 32px 24px 32px;
+  margin: 24px 0px;
+  font-size: 18px;
+  line-height: 28px;
+  font-size: 500;
+
+}
+
+.tFooter{
+  display: flex;
+  justify-content: center;
+  column-gap: 64px;
+  padding: 24px 0px;
+}
+
+.bottomContainer{
+  padding:  48px 80px;
+}
+
+.bBody{
+  border-top: 0.5px solid #EAECF0;
+  padding: 0px 32px;
+}
+.bContent{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 36px 4px;
+}
+
+.bottomP{
+  margin: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #667085;
+
+}
+
+
+@media screen and (max-width: 357px){
+  .p{
+  font-size: 14px;
+  line-height: 20px;
+  }
+  .bottomP{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+}
+
+@media screen and (max-width: 500px){
+  .bContent{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    row-gap: 30px;
+
+  }
+}
+
+
+@media screen and (max-width: 700px){
+  .topContainer{
+    padding:64px 0px 32px 0px;
+    font-size: 18px;
+    color: #101828;
+  }
+  .topHeader{
+    padding: 0px 16px;
+    
+  }
+  .tHeaderIcon{
+   right: 0px;
+   
+  }
+  .p{
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .bottomContainer{
+    padding:  32px 0px;
+  }
+  .bBody{
+    padding: 0px 16px;
+  }
+  .bContent{
+    display: flex;
+    text-align: start;
+    row-gap: 30px;
+
+  }
+  .zuri{
+    width: 139px;
+    height: 18px;
+  }
+  .hng{
+    width: 99px;
+    height: 24px;
+  }
+  
+}
