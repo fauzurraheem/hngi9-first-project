@@ -13,25 +13,19 @@ function App() {
       <section className='topContainer'>
         <div className='topHeader'>
           <div className='tHeader'>
-            <img src={profile} alt=""/>
-            <h2>Annette black </h2>
+            <img src={profile} id='profile__img' alt=""/>
+            <h2 id='twitter'>Femzy </h2>
+            <h2 id='slack' className='slack'>Femzy</h2>
             <img src={returnD} className='tHeaderIcon' alt=""/>
+            <img src={returnM} className='tHeaderIcon2' alt=""/>
           </div>
           <div className='tBody'>
-            
-              <a href="#" className=''><p className='p'>Twitter Link</p></a>
-            
-            
-              <a href="#"><p className='p'>Zuri Team</p></a>
-            
-              <a href="#"><p className='p'>Zuri Books</p></a>
-            
-              <a href="#"><p className='p'>Python books</p></a>
-            
-              <a href="#"><p className='p'>Background Check For Coders</p></a>
-           
-              <a href="#"><p className='p'>Design Books</p></a>
-            
+              <a href="https://twitter.com/Irekanmi10" id='btn__zuri'><p className='p'>Twitter Link</p></a>
+              <a href="https://training.zuri.team/" id='btn__zuri'><p className='p'>Zuri Team</p></a>
+              <a href="http://books.zuri.team" id='books'><p className='p'>Zuri Books</p></a>
+              <a href="https://books.zuri.team/python-for-beginners?ref_id=<Femzy>" id='book__python'><p className='p'>Python books</p></a>
+              <a href="https://background.zuri.team" id='pitch'><p className='p'>Background Check For Coders</p></a>
+              <a href="https://books.zuri.team/design-rules" id='book__design'><p className='p'>Design Books</p></a>
           </div>
         </div>
         <div className='tFooter'>

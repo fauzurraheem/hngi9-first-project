@@ -2,7 +2,9 @@
   text-align: center;
 }
 
-
+.slack{
+  display: none;
+}
 .topContainer{
   padding: 64px 112px;
   font-size: 18px;
@@ -22,6 +24,11 @@
   position: absolute;
   top: -20px;
  right: 50px;
+ 
+}
+.tHeaderIcon2{
+  position: absolute;
+  display: none;
  
 }
 
@@ -80,6 +87,16 @@ a{
   .p{
   font-size: 14px;
   line-height: 20px;
+  }
+  .tHeaderIcon{
+   display: none;
+  }
+  .tHeaderIcon2{
+   display: block;
+  top: -20px;   
+  right: 0px;
+ 
+   
   }
   .bottomP{
     font-weight: 400;
