@@ -1,4 +1,4 @@
-import profile from './assets/profile__img.svg'
+
 import icon from './assets/Icon.svg'
 import slack from './assets/slack.svg'
 import i4g from './assets/I4G.svg'
@@ -6,14 +6,19 @@ import vector from './assets/Vector.svg'
 import returnD from './assets/returnD.svg'
 import returnM from './assets/returnM.svg'
 import './App.css'
+import falz from './assets/falz.jpg'
+
 
 function App() {
   return (
     <div >
-      <section className='topContainer'>
+      <section className='topContainer'>t
         <div className='topHeader'>
           <div className='tHeader'>
-            <img src={profile} id='profile__img' alt=""/>
+            <div className='tHeadimg'>
+              <img src={falz} id='profile__img' alt="" className='imgg'/>
+            </div>
+            
             <h2 id='twitter'>Femzy </h2>
             <h2 id='slack' className='slack'>Femzy</h2>
             <img src={returnD} className='tHeaderIcon' alt=""/>
