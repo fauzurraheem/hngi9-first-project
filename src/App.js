@@ -12,7 +12,7 @@ import falz from './assets/falz.jpg'
 function App() {
   return (
     <div >
-      <section className='topContainer'>t
+      <section className='topContainer'>
         <div className='topHeader'>
           <div className='tHeader'>
             <div className='tHeadimg'>
