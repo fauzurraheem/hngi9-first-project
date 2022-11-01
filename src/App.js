@@ -20,7 +20,7 @@ function App() {
             </div>
             
             <h2 id='twitter'>Femzy </h2>
-            <h2 id='slack' className='slack'>Femzy</h2>
+            <h2 id='slack' className='slack'>Falz</h2>
             <img src={returnD} className='tHeaderIcon' alt=""/>
             <img src={returnM} className='tHeaderIcon2' alt=""/>
           </div>
