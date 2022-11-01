@@ -66,6 +66,9 @@ a{
   font-size: 500;
 
 }
+.p:hover{
+  background-color: #bdbfc3;
+}
 
 .tFooter{
   display: flex;

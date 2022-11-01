@@ -25,12 +25,12 @@ function App() {
             <img src={returnM} className='tHeaderIcon2' alt=""/>
           </div>
           <div className='tBody'>
-              <a href="https://twitter.com/Irekanmi10" ><p className='p'>Twitter Link</p></a>
-              <a href="https://training.zuri.team/" id='btn__zuri'><p className='p'>Zuri Team</p></a>
-              <a href="http://books.zuri.team" id='books'><p className='p'>Zuri Books</p></a>
-              <a href="https://books.zuri.team/python-for-beginners?ref_id=<Femzy>" id='book__python'><p className='p'>Python books</p></a>
-              <a href="https://background.zuri.team" id='pitch'><p className='p'>Background Check For Coders</p></a>
-              <a href="https://books.zuri.team/design-rules" id='book__design'><p className='p'>Design Books</p></a>
+              <a href="https://twitter.com/Irekanmi10"  ><p className='p'>Twitter Link</p></a>
+              <a href="https://training.zuri.team/" id='btn__zuri' ><p className='p'>Zuri Team</p></a>
+              <a href="http://books.zuri.team" id='books' title='Get all the books you need about design and coding'><p className='p'>Zuri Books</p></a>
+              <a href="https://books.zuri.team/python-for-beginners?ref_id=<Falz>" id='book__python' title='Get the recourses designed to help you improve and grow in any field you are'><p className='p'>Python books</p></a>
+              <a href="https://background.zuri.team" id='pitch' title='Do you need to find about a particular developer? proceed to zuri service checker'><p className='p'>Background Check For Coders</p></a>
+              <a href="https://books.zuri.team/design-rules" id='book__design' title='Get all the books you need when it comes design for free'><p className='p'>Design Books</p></a>
           </div>
         </div>
         <div className='tFooter'>
