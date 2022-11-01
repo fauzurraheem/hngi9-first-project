@@ -25,7 +25,7 @@ function App() {
             <img src={returnM} className='tHeaderIcon2' alt=""/>
           </div>
           <div className='tBody'>
-              <a href="https://twitter.com/Irekanmi10" id='btn__zuri'><p className='p'>Twitter Link</p></a>
+              <a href="https://twitter.com/Irekanmi10" ><p className='p'>Twitter Link</p></a>
               <a href="https://training.zuri.team/" id='btn__zuri'><p className='p'>Zuri Team</p></a>
               <a href="http://books.zuri.team" id='books'><p className='p'>Zuri Books</p></a>
               <a href="https://books.zuri.team/python-for-beginners?ref_id=<Femzy>" id='book__python'><p className='p'>Python books</p></a>
