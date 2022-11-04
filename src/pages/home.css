@@ -77,53 +77,10 @@ a{
   padding: 24px 0px;
 }
 
-.bottomContainer{
-  padding:  48px 80px;
-}
-
-.bBody{
-  border-top: 0.5px solid #EAECF0;
-  padding: 0px 32px;
-}
-.bContent{
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  padding: 36px 4px;
-}
-
-.bottomP{
-  margin: 0px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #667085;
-
-}
-
-
 @media screen and (max-width: 357px){
   .p{
   font-size: 14px;
   line-height: 20px;
-  }
-  .bottomP{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  
-}
-
-@media screen and (max-width: 500px){
-  .bContent{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    row-gap: 30px;
-
   }
 }
 
@@ -145,26 +102,6 @@ a{
   .p{
     font-size: 18px;
     line-height: 20px;
-  }
-  .bottomContainer{
-    padding:  32px 0px;
-  }
-  .bBody{
-    padding: 0px 16px;
-  }
-  .bContent{
-    display: flex;
-    text-align: start;
-    row-gap: 30px;
-
-  }
-  .zuri{
-    width: 139px;
-    height: 18px;
-  }
-  .hng{
-    width: 99px;
-    height: 24px;
   }
   .tHeaderIcon{
     display: none;
