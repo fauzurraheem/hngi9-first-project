@@ -78,7 +78,13 @@ label{
   color: #667085;
   font-family: 'Inter';
   font-style: normal;
+  outline: none;
 
+}
+
+.textInputs:focus{
+  border: 1px solid #84CAFF;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 }
 
 .mInputs-cb{
@@ -90,11 +96,128 @@ label{
   margin-bottom: 32px;
 }
 
-.checkbox{
-  /* background: #FFFFFF; */
+.textInputs-tx{
+  padding: 10px 14px;
+  /* gap: 8px; */
+  width:100%;
+  /* height: 44px; */
+  background: #FFFFFF;
+  border: 1px solid #D0D5DD;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #667085;
+  font-family: 'Inter';
+  font-style: normal;
+  outline: none;
+}
+
+.textInputs-tx:focus{
+  border: 1px solid #84CAFF;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF;
+}
+
+.e-p{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+margin: 2px 0px;
+
+color: #F83F23;
+}
+
+/* .checkbox{
+  background: #FFFFFF; 
   box-sizing: border-box;
   border: 1px solid #D0D5DD;
+  border-radius: 12px;
+  outline: none;
+} */
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #eee;
+  width: 20px;
+height: 20px;
+background: #FFFFFF;
+border: 1px solid #D0D5DD;
+border-radius: 6px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:focus input ~ .checkmark {
+  border: 1px solid #84CAFF;
+  box-shadow: 0px 0px 0px 4px #D1E9FF;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  background: #F9FAFB;
+  border: 1px solid #1570EF;
   border-radius: 6px;
+}
+.checkbox input:focus ~ .checkmark {
+  border: 1px solid #84CAFF;
+  box-shadow: 0px 0px 0px 4px #D1E9FF;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  border:  0px solid #1570EF;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.checkbox:focus{
+
 }
 
 .m-p{
@@ -120,11 +243,33 @@ label{
   border-radius: 8px;
 }
 
+.div-btn:hover{
+  background: #175CD3;
+/* Primary/700 */
+
+border: 1px solid #175CD3;
+/* Shadow/xs */
+
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.div-btn:focus{
+  background: #1570EF;
+border: 1px solid #1570EF;
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF;
+}
+
+.div-btn:disabled{
+  background: #B2DDFF;
+border: 1px solid #B2DDFF;
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
 .btn{
   font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 24px;
-color: #FFFFFF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
 }
