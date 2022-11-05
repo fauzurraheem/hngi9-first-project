@@ -4,14 +4,15 @@ import './contact.css'
 const Contact = () => {
   const [checked, setChecked] = useState(false)
   const [formData, setFormData] = useState({firstName:'', lastName:'', message:'', email:''})
-  const [errorM, setErrorM] = useState({
-    fNameE:false, lNameE:false, emailE:false, messageE:false,
-  })
+  const [fNameE, setfNameE] = useState(false)
+  const [lNameE, setlNameE] = useState(false)
+  const [emailE, setemailE] = useState(false)
+  const [messageE, setmessageE] = useState(false)
+ 
 
   const {firstName, lastName, message, email} = formData
 
-  const {fNameE,lNameE,emailE,messageE} = errorM
-
+ 
   const changed = (e) =>{
     setFormData({
       ...formData,
@@ -22,21 +23,29 @@ const Contact = () => {
   const submit = (e) => {
     e.preventDefault()
     if(firstName === ''){
-      setErrorM({
-        ...errorM,
-        fNameE:true
-      })
+      setfNameE(true)
+    }else{
+      setfNameE(false)
     }
     if(lastName === ''){
-      setErrorM({
-        ...errorM,
-        lNameE:true
-      })
+      setlNameE(true)
+    }else{
+      setlNameE(false)
     }
-    console.log(errorM)
+    if(email === ''){
+      setemailE(true)
+    }else{
+      setemailE(false)
+    }
+    if(message === ''){
+      setmessageE(true)
+    }else{
+      setmessageE(false)
+    }
+    
   }
 
-  console.log(firstName)
+  
 
 
 
@@ -58,23 +67,22 @@ const Contact = () => {
             <div className='mInputs'>
               <label htmlFor=''>First name</label>
               <input className='textInputs' type='text' placeholder=' Enter your first name' name='firstName' value={firstName} onChange={changed} />
-              <p className='e-p'>Please enter your First Name</p>
+              <p className={`${fNameE ? 'e-p': 't-p'}`}>Please enter your First Name</p>
             </div>
-            <p></p>
             <div className='mInputs'>
               <label htmlFor=''>Last name</label>
               <input className='textInputs' type='text' placeholder=' Enter your last name' name='lastName'  value={lastName} onChange={changed} />
-              <p className='e-p'>Please enter your Last Name</p>
+              <p className={`${lNameE ? 'e-p': 't-p'}`}>Please enter your Last Name</p>
             </div>
             <div className='mInputs'>
               <label htmlFor=''>Email</label>
-              <input className='textInputs' type='email' placeholder=' Enter your first name' name='email' value={email} onChange={changed} />
-              <p className='e-p'>Please enter a valid email</p>
+              <input className='textInputs' type='email' placeholder=' Enter your email' name='email' value={email} onChange={changed} />
+              <p className={`${emailE ? 'e-p': 't-p'}`}>Please enter a valid email</p>
             </div>
             <div className='mInputs'>
               <label htmlFor=''>Message</label>
-              <textarea className='textInputs-tx' type='text' rows={5} placeholder=' Send me a message and Ill reply you as soon as possible...' name='message'  value={message} onChange={changed}/>
-              <p className='e-p'>Please enter a message</p>
+              <textarea className={`textInputs-tx ${messageE && 'textInputs-tx-e'}`} type='text' rows={5} placeholder=' Send me a message and Ill reply you as soon as possible...' name='message'  value={message} onChange={changed}/>
+              <p className={`${messageE ? 'e-p': 't-p'}`}>Please enter a message</p>
             </div>
             <div className='mInputs-cb'>
               <label className='checkbox' >
