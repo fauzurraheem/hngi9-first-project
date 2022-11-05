@@ -75,17 +75,26 @@ label{
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #667085;
+  color: #101828;
   font-family: 'Inter';
   font-style: normal;
   outline: none;
 
+}
+.textInputs::placeholder{
+  color: #667085;
 }
 
 .textInputs:focus{
   border: 1px solid #84CAFF;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 }
+.textInputs-e{
+ border: 1px solid #F89687;
+}
+.textInputs-e:focus{
+  border: 1px solid #F89687;
+ }
 
 .mInputs-cb{
   display: flex;
@@ -108,10 +117,13 @@ label{
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #667085;
+  color: #101828;
   font-family: 'Inter';
   font-style: normal;
   outline: none;
+}
+.textInputs-tx:checked{
+  color: #667085;
 }
 
 .textInputs-tx:focus{
@@ -140,7 +152,7 @@ label{
 
   color: #F83F23;
 }
-.t-p{
+.ft-p{
   display: none;
 }
 
@@ -285,4 +297,23 @@ box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   font-size: 16px;
   line-height: 24px;
   color: #FFFFFF;
+}
+
+
+@media screen and (min-width: 700px) {
+  .container{
+    padding: 64px 112px 96px 112px;
+  }
+  .mForm-Desk{
+    display: grid;
+    grid-template-columns:auto auto;
+    gap: 24px;
+  }
+  
+}
+
+@media screen and (min-width: 1100px) {
+  .containerBody{
+    padding: 92px 248px;
+  }
 }

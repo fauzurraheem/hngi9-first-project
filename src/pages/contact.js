@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './contact.css'
 
 const Contact = () => {
+  const navigate = useNavigate()
   const [checked, setChecked] = useState(false)
   const [formData, setFormData] = useState({firstName:'', lastName:'', message:'', email:''})
   const [fNameE, setfNameE] = useState(false)
@@ -42,6 +44,9 @@ const Contact = () => {
     }else{
       setmessageE(false)
     }
+    if(message !== '' && email !== '' && lastName !== ''&& firstName !== ''){
+      navigate('/success')
+    }
     
   }
 
@@ -52,51 +57,55 @@ const Contact = () => {
 
   return (
     <div className='container'>
-      <section className='tSection'>
-        <div className='tContainer'>
-          <div className='tHead'>
-            <h2 className='t-h2'>Contact Me
-            </h2>
-            <p className='t-p'>Hi there, contact me to ask me about anything you have in mind.</p>
+      <div className='containerBody'>
+        <section className='tSection'>
+          <div className='tContainer'>
+            <div className='tHead'>
+              <h2 className='t-h2'>Contact Me
+              </h2>
+              <p className='t-p'>Hi there, contact me to ask me about anything you have in mind.</p>
+            </div>
           </div>
-        </div>
-      </section>
-      <section className='mSection'>
-        <div className='mContainer'>
-          <form className='mForm' onSubmit={submit}>
-            <div className='mInputs'>
-              <label htmlFor=''>First name</label>
-              <input className='textInputs' type='text' placeholder=' Enter your first name' name='firstName' value={firstName} onChange={changed} />
-              <p className={`${fNameE ? 'e-p': 't-p'}`}>Please enter your First Name</p>
-            </div>
-            <div className='mInputs'>
-              <label htmlFor=''>Last name</label>
-              <input className='textInputs' type='text' placeholder=' Enter your last name' name='lastName'  value={lastName} onChange={changed} />
-              <p className={`${lNameE ? 'e-p': 't-p'}`}>Please enter your Last Name</p>
-            </div>
-            <div className='mInputs'>
-              <label htmlFor=''>Email</label>
-              <input className='textInputs' type='email' placeholder=' Enter your email' name='email' value={email} onChange={changed} />
-              <p className={`${emailE ? 'e-p': 't-p'}`}>Please enter a valid email</p>
-            </div>
-            <div className='mInputs'>
-              <label htmlFor=''>Message</label>
-              <textarea className={`textInputs-tx ${messageE && 'textInputs-tx-e'}`} type='text' rows={5} placeholder=' Send me a message and Ill reply you as soon as possible...' name='message'  value={message} onChange={changed}/>
-              <p className={`${messageE ? 'e-p': 't-p'}`}>Please enter a message</p>
-            </div>
-            <div className='mInputs-cb'>
-              <label className='checkbox' >
-                <input type='checkbox'/>
-                <span className="checkmark" onClick={() => setChecked(!checked)}></span>
-              </label>
-              <p className='m-p'>You agree to providing your data to name who may contact you.</p>
-            </div>
-            <button  disabled={!checked}  className='div-btn'>
-              <span className='btn'>Send message </span>
-            </button>
-          </form>
-        </div>
-      </section>
+        </section>
+        <section className='mSection'>
+          <div className='mContainer'>
+            <form className='mForm' onSubmit={submit}>
+              <div className='mForm-Desk'>
+                <div className='mInputs'>
+                  <label htmlFor=''>First name</label>
+                  <input className={`textInputs ${fNameE && 'textInputs-e'}`} type='text' placeholder=' Enter your first name' name='firstName' value={firstName} onChange={changed} />
+                  <p className={`${fNameE ? 'e-p': 'ft-p'}`}>Please enter your First Name</p>
+                </div>
+                <div className='mInputs'>
+                  <label htmlFor=''>Last name</label>
+                  <input className={`textInputs ${lNameE && 'textInputs-e'}`} type='text' placeholder=' Enter your last name' name='lastName'  value={lastName} onChange={changed} />
+                  <p className={`${lNameE ? 'e-p': 'ft-p'}`}>Please enter your Last Name</p>
+                </div>
+              </div>
+              <div className='mInputs'>
+                <label htmlFor=''>Email</label>
+                <input className={`textInputs ${emailE && 'textInputs-e'}`} type='email' placeholder=' Enter your email' name='email' value={email} onChange={changed} />
+                <p className={`${emailE ? 'e-p': 'ft-p'}`}>Please enter a valid email</p>
+              </div>
+              <div className='mInputs'>
+                <label htmlFor=''>Message</label>
+                <textarea className={`textInputs-tx ${messageE && 'textInputs-tx-e'}`} type='text' rows={5} placeholder=' Send me a message and Ill reply you as soon as possible...' name='message'  value={message} onChange={changed}/>
+                <p className={`${messageE ? 'e-p': 'ft-p'}`}>Please enter a message</p>
+              </div>
+              <div className='mInputs-cb'>
+                <label className='checkbox' >
+                  <input type='checkbox'/>
+                  <span className="checkmark" onClick={() => setChecked(!checked)}></span>
+                </label>
+                <p className='m-p'>You agree to providing your data to name who may contact you.</p>
+              </div>
+              <button  disabled={!checked}  className='div-btn'>
+                <span className='btn'>Send message </span>
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
     </div>
   )
 }
