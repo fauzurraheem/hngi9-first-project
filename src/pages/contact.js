@@ -72,24 +72,25 @@ const Contact = () => {
             <form className='mForm' onSubmit={submit}>
               <div className='mForm-Desk'>
                 <div className='mInputs'>
-                  <label htmlFor=''>First name</label>
-                  <input className={`textInputs ${fNameE && 'textInputs-e'}`} type='text' placeholder=' Enter your first name' name='firstName' value={firstName} onChange={changed} />
+                  <label htmlFor='first_name'>First name</label>
+                  <input className={`textInputs ${fNameE && 'textInputs-e'}`} type='text' placeholder=' Enter your first name' name='firstName' value={firstName} onChange={changed} id='first_name' />
                   <p className={`${fNameE ? 'e-p': 'ft-p'}`}>Please enter your First Name</p>
                 </div>
                 <div className='mInputs'>
                   <label htmlFor=''>Last name</label>
-                  <input className={`textInputs ${lNameE && 'textInputs-e'}`} type='text' placeholder=' Enter your last name' name='lastName'  value={lastName} onChange={changed} />
+                  <input className={`textInputs ${lNameE && 'textInputs-e'}`} type='text' placeholder=' Enter your last name' name='lastName'  value={lastName} onChange={changed} id='
+                  last_name' />
                   <p className={`${lNameE ? 'e-p': 'ft-p'}`}>Please enter your Last Name</p>
                 </div>
               </div>
               <div className='mInputs'>
-                <label htmlFor=''>Email</label>
-                <input className={`textInputs ${emailE && 'textInputs-e'}`} type='email' placeholder=' Enter your email' name='email' value={email} onChange={changed} />
+                <label htmlFor='email'>Email</label>
+                <input className={`textInputs ${emailE && 'textInputs-e'}`} type='email' placeholder=' Enter your email' name='email' value={email} onChange={changed} id='email' />
                 <p className={`${emailE ? 'e-p': 'ft-p'}`}>Please enter a valid email</p>
               </div>
               <div className='mInputs'>
-                <label htmlFor=''>Message</label>
-                <textarea className={`textInputs-tx ${messageE && 'textInputs-tx-e'}`} type='text' rows={5} placeholder=' Send me a message and Ill reply you as soon as possible...' name='message'  value={message} onChange={changed}/>
+                <label htmlFor='message'>Message</label>
+                <textarea className={`textInputs textInputs-tx ${messageE && 'textInputs-tx-e'}`} type='text' rows={5} placeholder=' Send me a message and Ill reply you as soon as possible...' name='message' id='message'  value={message} onChange={changed}/>
                 <p className={`${messageE ? 'e-p': 'ft-p'}`}>Please enter a message</p>
               </div>
               <div className='mInputs-cb'>
@@ -99,7 +100,7 @@ const Contact = () => {
                 </label>
                 <p className='m-p'>You agree to providing your data to name who may contact you.</p>
               </div>
-              <button  disabled={!checked}  className='div-btn'>
+              <button id='btn__submit'  disabled={!checked}  className='div-btn'>
                 <span className='btn'>Send message </span>
               </button>
             </form>
